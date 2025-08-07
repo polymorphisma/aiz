@@ -1,0 +1,2 @@
+class ModelConfigurationError(Exception):
+    pass

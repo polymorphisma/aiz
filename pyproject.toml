@@ -12,7 +12,7 @@ authors = [
 ]
 description = "AI-Powered CLI Navigator. Reserved for future development."
 readme = "README.md"
-requires-python = ">=3.8" # Let's stick with 3.8+ as planned
+requires-python = ">=3.9.0, <4.0" # Let's stick with 3.8+ as planned
 license = { text = "MIT License" } # Good practice to declare a license
 keywords = ["ai", "cli", "shell", "developer-tools", "llm"]
 classifiers = [
@@ -29,6 +29,11 @@ classifiers = [
     "Topic :: Utilities",
 ]
 dependencies = [
+    "langchain>=0.0.27",
+    "langchain-anthropic>=0.1.23",
+    "langchain-aws>=0.1.18",
+    "langgraph>=0.6.3",
+    "python-dotenv>=1.0.1",
     "requests>=2.32.4",
 ]
 
