@@ -8,10 +8,6 @@ from langchain_core.messages import HumanMessage
 
 load_dotenv()
 
-
-
-
-
 async def run_supervisor_test():
     """
     Builds and runs the SUPERVISOR agent for a test query.
@@ -28,7 +24,7 @@ async def run_supervisor_test():
 
     supervisor_runnable = build_supervisor_agent(aws_bedrock_config)
 
-    user_query = "IN my currnet project i want to add changes commit and using gh create pr against main branch?"
+    user_query = "how to add all changes, commit push and create pr against main branch using gh."
 
     # --- THIS IS THE FIX ---
     initial_state = {
@@ -37,6 +33,7 @@ async def run_supervisor_test():
         "user_query": user_query, # We still keep this for reference
     }
     
+
     config = {"configurable": {"thread_id": "supervisor-test-1"}}
     final_state = None
 
